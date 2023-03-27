@@ -15,7 +15,7 @@
 
 header {
     z-index: 999;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,6 +32,7 @@ header .brand {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
+
 }
 
 header .navigation {
@@ -307,7 +308,20 @@ section {
     object-fit: cover;
 }
 
+
+div.cont::before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(3, 96, 251, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 .cont{
+    
     width: 100%;
     height: 100%;
     display: flex;
@@ -320,7 +334,7 @@ section {
   
     align-items: center;
     min-height: 100vh;
-    background-color: #7ea7e2;
+    background-image: linear-gradient(#0040ff,#000000);
 
 }
 
@@ -360,5 +374,12 @@ section {
     animation-delay: 2s;
     animation-duration: 2.5s;
 
-    /* animation-fill-mode:forwards; */
-}
+    
+} 
+
+/* body{
+    animation-name: manu;
+    animation-delay: 2s;
+    animation-duration: 2.5s;
+    animation-fill-mode:backwards;
+} */
